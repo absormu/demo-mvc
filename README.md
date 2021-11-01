@@ -4,6 +4,7 @@
     1. Menambahkan dependency spring web & thymeleaf
     2. Menambahkan repo maven org.webjars = bootstrap & ebjars-locator-core dan integrasi bootstrap
     3. Mengirim data dari controller ke view
+    4. Handling from submission
 ```
 # Git
 ```

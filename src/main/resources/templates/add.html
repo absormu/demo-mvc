@@ -44,27 +44,29 @@
         </div>
     </div>
 </nav>
-    <div class="container">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Code</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="product : ${products}">
-                <td th:text="${product.id}">Name</td>
-                <td th:text="${product.code}">Name</td>
-                <td th:text="${product.name}">Name</td>
-                <td th:text="${product.price}">Name</td>
-            </tr>
-            </tbody>
-        </table>
-
+<div class="container">
+    <h2>Add New Product</h2>
+    <div>
+        <form th:object="${product}" method="post" th:action="@{/save}">
+            <div class="form-group">
+                <label>Code</label>
+                <input type="text" class="form-control" th:field="*{code}"/>
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" th:field="*{name}"/>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" th:field="*{price}"/>
+            </div>
+            <br>
+            <p>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </p>
+        </form>
     </div>
+</div>
 
 <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>"
 </body>
